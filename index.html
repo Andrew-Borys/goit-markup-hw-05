@@ -54,7 +54,7 @@
             <div class="container hero-container">
 
                 <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-                <button class="modal-btn" type="button">Заказать услугу</button>
+                <button class="modal-btn" type="button" data-modal-open>Заказать услугу</button>
 
             </div>
         </section>
@@ -114,9 +114,12 @@
                 <h2 class="title-chapter">Чем мы занимаемся</h2>
                 <ul class="list img-what-we-do">
 
-                    <li class="doing-item"><img src="./images/what-we-doing/img-1.jpg" height="294" width="370" alt="программист пишет код"></li>
-                    <li class="doing-item"><img src="./images/what-we-doing/img-2.jpg" height="294" width="370" alt="оптимизация сайтов под мобильную версию"></li>
-                    <li class="doing-item"><img src="./images/what-we-doing/img-3.jpg" height="294" width="370" alt="руки держат планшет на дисплее разноцветный куб"></li>
+                    <li class="doing-item"><img src="./images/what-we-doing/img-1.jpg" height="294" width="370" alt="программист пишет код">
+                    <h3 class="overley-doing">Десктопные приложения</h3></li>
+                    <li class="doing-item"><img src="./images/what-we-doing/img-2.jpg" height="294" width="370" alt="оптимизация сайтов под мобильную версию">
+                    <h3 class="overley-doing">Мобильные приложения</h3></li>
+                    <li class="doing-item"><img src="./images/what-we-doing/img-3.jpg" height="294" width="370" alt="руки держат планшет на дисплее разноцветный куб">
+                    <h3 class="overley-doing">Дизайнерские решения</h3></li>
 
                 </ul>
             </div>
@@ -352,5 +355,11 @@
     </div>
     </footer>
     
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="modal-close-btn" data-modal-close>X</button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

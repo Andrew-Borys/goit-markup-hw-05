@@ -115,11 +115,12 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-text-color);
+  color: var(--discription-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms linear;
 }
 
 .nav-link:hover,
@@ -129,6 +130,24 @@ img {
 
 .current {
   color: var(--accent-color);
+}
+
+.current::after {
+  position: absolute;
+  content: "";
+  opacity: 1;
+  display: block;
+  bottom: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  background-size: auto;
+  border-radius: 2px;
+}
+
+.list-item {
+  position: relative;
 }
 
 /* List contact */
@@ -158,6 +177,7 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition: color 250ms linear;
 }
 
 .contact-link:hover,
@@ -303,6 +323,24 @@ img {
   margin-left: 30px;
 }
 
+.doing-item {
+  position: relative;
+}
+
+.overley-doing {
+  position: absolute;
+  padding: 27px 10px 27px;
+  bottom: 0;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--white-text-back-color);
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
 /*Our-team*/
 
 .team {
@@ -377,6 +415,8 @@ img {
   height: 44px;
   border-radius: 50%;
   fill: var(--icon-fill-color);
+
+  transition: color 250ms, background-color 250ms linear;
 }
 
 .social-container:hover,
@@ -499,6 +539,7 @@ img {
 
   fill: var(--white-text-back-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: color 250ms, background-color 250ms linear;
 }
 
 .footer-link:hover,
@@ -626,4 +667,47 @@ img {
   font-size: 16px;
   line-height: 1.89;
   color: var(--discription-text-color);
+}
+
+/* Backdrop */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition: all 250ms linear;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 528px;
+  height: 581px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  transition: transparent;
+  cursor: pointer;
 }
