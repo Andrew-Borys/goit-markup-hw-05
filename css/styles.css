@@ -685,6 +685,7 @@ button {
   background: rgba(33, 150, 243, 0.9);
   color: var(--white-text-back-color);
   font-family: var(--main-font);
+  text-align: start;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
