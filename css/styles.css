@@ -124,7 +124,7 @@ button {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--discription-text-color);
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -225,6 +225,7 @@ button {
 
   font-weight: 900;
   color: var(--white-text-back-color);
+  font-family: roboto;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
@@ -438,6 +439,7 @@ button {
 
 .social-container:hover,
 .social-container:focus {
+  transition: ;
   background-color: var(--accent-color);
   fill: var(--white-text-back-color);
 }
@@ -707,7 +709,7 @@ button {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
-  transition: all 1000ms linear;
+  transition: all 250ms linear;
 }
 
 .backdrop.is-hidden {
