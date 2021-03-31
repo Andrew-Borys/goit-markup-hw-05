@@ -58,6 +58,7 @@ button {
 }
 input {
   padding: 0;
+  margin: 0;
 }
 
 .container {
@@ -861,18 +862,27 @@ input {
 .contact-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .modal-form-field {
   position: relative;
   margin-bottom: 10px;
+  /* width: 100%; */
+}
+
+.input-title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
 }
 
 .contact-form-input {
-  margin-top: 4px;
   padding-left: 42px;
-  width: 448px;
+  width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -892,7 +902,7 @@ input {
 .icon-in-input {
   position: absolute;
   top: 50%;
-  left: 50%;
+  transform: translateY(-50%);
 
   left: 12px;
   fill: var(--title-text-color);
@@ -901,6 +911,7 @@ input {
 }
 
 .modal-form-btn {
+  margin: 0 auto;
   width: 200px;
   height: 50px;
   margin-top: 30px;
@@ -917,7 +928,8 @@ input {
 
 .contact-form-message {
   height: 120px;
-  width: 448px;
+  width: 100%;
+
   margin-top: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -965,5 +977,5 @@ input {
 }
 
 .modal-form-term:focus + .modal-form-check-desk::before {
-  outline: black;
+  outline: 1px solid #000;
 }
